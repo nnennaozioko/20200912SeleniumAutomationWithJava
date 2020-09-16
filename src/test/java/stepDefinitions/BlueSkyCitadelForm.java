@@ -59,7 +59,7 @@ public class BlueSkyCitadelForm {
     @Then("^I close my window$")
     public void iCloseMyWindow() {
         driver.close();
-        driver.quit();
+        //driver.quit();
     }
 
     @And("^I enter email address$")
@@ -129,7 +129,6 @@ public class BlueSkyCitadelForm {
 
     @And("^I clear the Password$")
     public void iClearThePassword() {
-
         driver.findElement(By.name("nf-field-144")).clear();
 
     }
@@ -159,4 +158,85 @@ public class BlueSkyCitadelForm {
        boolean isMessageDisplayed =  driver.findElement(By.cssSelector("#nf-form-errors-9 > nf-errors > nf-section > div")).isDisplayed();
         System.out.println(isMessageDisplayed);
     }
-}
+
+    @And("^I click on Single Line Text$")
+    public void iClickOnSingleLineText() {
+        driver.findElement(By.cssSelector("#nf-field-135")).click();
+    }
+
+    @And("^I click on Select$")
+    public void iClickOnSelect() {
+      // driver.findElement(By.cssSelector("#nf-label-field-136")).click();
+    }
+
+    @And("^I enter the Data$")
+    public void iEnterTheData() {
+        driver.findElement(By.cssSelector("#nf-field-136")).click();
+    }
+
+    @And("^I click on the Email$")
+    public void iClickOnTheEmail() {
+        driver.findElement(By.cssSelector("#nf-label-field-124")).click();
+    }
+
+    @And("^I click on the password$")
+    public void iClickOnThePassword() {
+        driver.findElement(By.cssSelector("#nf-label-field-144")).click();
+    }
+
+    @And("^I click on the Multi-select$")
+    public void iClickOnTheMultiSelect() {
+        driver.findElement(By.cssSelector("#nf-label-field-137")).click();
+    }
+
+    @And("^I enter the Number$")
+    public void iEnterTheNumber() {
+        driver.findElement(By.cssSelector("#nf-field-137 > option:nth-child(1)")).click();
+    }
+
+    @And("^I click on the Checkbox button$")
+    public void iClickOnTheCheckboxButton() {
+        driver.findElement(By.cssSelector("#nf-label-field-139")).click();
+    }
+
+    @And("^I click on the Country$")
+    public void iClickOnTheCountry() {
+        driver.findElement(By.cssSelector("#nf-label-field-140")).click();
+    }
+
+    @And("^I enter the Country$")
+    public void iEnterTheCountry() {
+        driver.findElement(By.cssSelector("#nf-field-140")).click();
+    }
+
+    @And("^I click on the Date$")
+    public void iClickOnTheDate() {
+        driver.findElement(By.cssSelector("#nf-label-field-141")).click();
+    }
+
+    @And("^I enter the Date$")
+    public void iEnterTheDate() {
+     //   driver.findElement(By.cssSelector("#nf-field-141")).click();
+    }
+
+    @And("^I click on the Single Checkbox Button$")
+    public void iClickOnTheSingleCheckboxButton() {
+        driver.findElement(By.cssSelector("#nf-label-field-142")).click();
+    }
+
+    @And("^I tick on the Box$")
+    public void iTickOnTheBox() {
+        driver.findElement(By.cssSelector("#nf-label-field-142")).click();
+    }
+
+    @And("^I click on Paragraph Text Button$")
+    public void iClickOnParagraphTextButton() {
+        driver.findElement(By.cssSelector("#nf-label-field-143")).click();
+    }
+
+    @And("^T type the text$")
+    public void tTypeTheText() {
+        driver.findElement(By.cssSelector("#nf-field-143")).click();
+    }
+
+        }
